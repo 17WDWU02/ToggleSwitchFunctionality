@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Toggle Button Functionality</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+	<h1>Lights</h1>
+
+	<div class="row">
+		<!-- Lights -->
+		<div class="Control text-center">
+			<h4>Room 1 Lights</h4>
+			<label class="switch">
+			  <input type="checkbox" id="Lights1" class="toggleSwitch">
+			  <div class="slider round"></div>
+			</label>
+		</div>
+
+		<!-- Lights -->
+		<div class="Control text-center">
+			<h4>Room 2 Lights</h4>
+			<label class="switch">
+			  <input type="checkbox" id="Lights2" class="toggleSwitch">
+			  <div class="slider round"></div>
+			</label>
+		</div>
+
+		<!-- Lights -->
+		<div class="Control text-center">
+			<h4>Room 3 Lights</h4>
+			<label class="switch">
+			  <input type="checkbox" id="Lights3" class="toggleSwitch">
+			  <div class="slider round"></div>
+			</label>
+		</div>
+	<div>
+	<hr>
+	<button class="AllOff">Turn OFF all Lights</button>
+	<button class="AllOn">Turn ON all Lights</button>
+	<hr>
+	<a href="security.html"><button href="test">Go to Security Page</button></a>
+	
+
+
+	<script type="text/javascript">
+	if (localStorage.getItem("switches") !== null) {
+		var Storage = JSON.parse(localStorage.getItem("switches"));
+		for (var i = 0; i < Storage.length; i++) {
+			if(Storage[i]['active'] === 'true' ){
+				var SwitchID = Storage[i]['switch'];
+				var SwitchExists = document.getElementById(SwitchID);
+				if(SwitchExists !== null){
+					SwitchExists.checked = true;
+				}
+			}
+		};
+	}
+	</script>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
