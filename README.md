@@ -10,4 +10,4 @@ You will have to do some changes to the JavaScript code for it to be able to ful
 
 Github Pages example bellow
 
-[Add to Cart Example](https://17wdwu02.github.io/ToggleSwitchFunctionality.github.io/)
+[Switch Toggle Example](https://17wdwu02.github.io/ToggleSwitchFunctionality.github.io/)
